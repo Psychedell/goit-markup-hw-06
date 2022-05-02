@@ -702,10 +702,9 @@ img {
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 2;
-
     opacity: 1;
     visibility: visible;
-    transition: opacity var(--transition-duration) var(--overlay-cubic);
+    transition: opacity var(--transition-duration) var(--overlay-cubic), visibility var(--transition-duration) var(--overlay-cubic);
 }
 
 .backdrop.is-hidden {
@@ -724,7 +723,6 @@ img {
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--transition-duration) var(--overlay-cubic);
-
     margin: 0;
     min-width: 528px;
     min-height: 581px;
@@ -751,7 +749,11 @@ img {
     border-radius: 50%;
     fill: var(--black-logo-color);
     transition: fill var(--transition-duration) var(--overlay-cubic);
-    cursor: pointer;
+    cursor: pointer;   
+}
+
+.button.send {
+    min-width: 200px;
 }
 
 .close-button:hover {
@@ -798,11 +800,15 @@ img {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
-    padding: 12px 42px;
+    padding: 0 42px;
     color: var(--titile-text-color);
     resize: none;
     cursor: pointer;
     transition: border var(--transition-duration) var(--overlay-cubic);
+}
+
+.form-input.contact-info {
+    height: 40px;
 }
 
 .form-input.comment {
